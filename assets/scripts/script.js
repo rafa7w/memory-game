@@ -14,7 +14,30 @@ let icons = [
         "tree",
 ];
 
-console.log(createCardsFromIcons(icons));
+let cards = null;
+
+startGame();
+
+function startGame() {
+
+        cards = createCardsFromIcons(icons);
+        shuffleCards(cards);
+
+}
+
+function shuffleCards(cards) {
+        
+        let currentIndex = cards.length;
+        let randomIndex = 0;
+
+        while (currentIndex !== 0) {
+
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                [cards[randomIndex], cards[currentIndex]] = [cards[currentIndex], cards[randomIndex]];
+        }       
+}
 
 function createCardsFromIcons(icons) {
 
