@@ -51,7 +51,7 @@ body, button {
 }
 
 .card-front img {
-        width: 100px;
+        width: 80px;
 }
 
 .card-back {
@@ -89,3 +89,4 @@ body, button {
         cursor: pointer;
         background-color: rgb(92, 11, 197);
 }
+
