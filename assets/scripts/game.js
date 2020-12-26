@@ -4,6 +4,21 @@ let game = {
         firstCard: null,
         secondCard: null,
 
+        icons: [
+                "book",
+                "box",
+                "car",
+                "cloud",
+                "desktop",
+                "dog",
+                "guitar",
+                "hat",
+                "pizza",
+                "tree",
+        ],
+
+        cards: null,
+
         setCard: function (id) {
 
                 let card = this.cards.filter(card => card.id === id)[0];
@@ -43,20 +58,9 @@ let game = {
                 this.clearCards();
         },
 
-        icons: [
-                "book",
-                "box",
-                "car",
-                "cloud",
-                "desktop",
-                "dog",
-                "guitar",
-                "hat",
-                "pizza",
-                "tree",
-        ],
-
-        cards: null,
+        checkGameOver: function () {
+                return this.cards.filter(card => !card.flipped).length == 0;
+        },
 
         createCardsFromIcons: function () {
 
